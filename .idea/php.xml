@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/complexity" />
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="PhpUnit">

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="694beef8-4928-49e0-92f8-534946596a1b" name="Default Changelist" comment="" />
+    <list default="true" id="694beef8-4928-49e0-92f8-534946596a1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-redis-react-crud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-redis-react-crud.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/composer.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/laravel-redis-crud/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +131,7 @@
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/complexity" />
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/laravel-redis-crud/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="2RPz8ubdPUO3V1ejBE5CyXaGTxz" />
@@ -145,7 +155,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687166347695</updated>
-      <workItem from="1687166349070" duration="804000" />
+      <workItem from="1687166349070" duration="1056000" />
+      <workItem from="1687283798381" duration="995000" />
     </task>
     <servers />
   </component>

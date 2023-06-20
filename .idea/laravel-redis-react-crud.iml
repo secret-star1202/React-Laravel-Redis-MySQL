@@ -117,6 +117,7 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-redis-crud/vendor/sebastian/complexity" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-redis-crud/vendor/sebastian/exporter" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-redis-crud/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-redis-crud/vendor/predis/predis" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
