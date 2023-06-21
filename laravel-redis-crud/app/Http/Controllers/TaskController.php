@@ -12,7 +12,6 @@ class TaskController extends Controller
     {
         $tasksFromRedis = json_decode(Redis::get('tasks'));
 
-
         if ($tasksFromRedis) {
             foreach ($tasksFromRedis as $task) {
                 $task->source = 'Redis';
@@ -40,9 +39,13 @@ class TaskController extends Controller
 
         $task = Task::create($request->all());
 
-        $tasks = Task::all();
+        $tasksFromDatabase = Task::all();
+        foreach ($tasksFromDatabase as $task) {
+            $task->source = 'Database';
+        }
 
-        Redis::del('tasks.');
+        Redis::del('tasks');
+        Redis::set('tasks', json_encode($tasksFromDatabase));
 
         return response()->json($task, 201);
     }
@@ -59,8 +62,13 @@ class TaskController extends Controller
         $task->save();
 
         Redis::del('tasks');
-        $tasks = Task::all();
-        Redis::set('tasks', json_encode($tasks));
+
+        $tasksFromDatabase = Task::all();
+        foreach ($tasksFromDatabase as $task) {
+            $task->source = 'Database';
+        }
+
+        Redis::set('tasks', json_encode($tasksFromDatabase));
 
         return response()->json($task);
     }
@@ -77,6 +85,11 @@ class TaskController extends Controller
 
         Redis::del('tasks');
         $tasks = Task::all();
+
+        foreach ($tasks as $task) {
+            $task->source = 'Database';
+        }
+
         Redis::set('tasks', json_encode($tasks));
 
         return response()->json(null, 204);
