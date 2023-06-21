@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="694beef8-4928-49e0-92f8-534946596a1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-redis-react-crud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-redis-react-crud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/TasksList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/TasksList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/app/Models/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,11 +159,41 @@
       <option name="presentableId" value="Default" />
       <updated>1687166347695</updated>
       <workItem from="1687166349070" duration="1056000" />
-      <workItem from="1687283798381" duration="995000" />
+      <workItem from="1687283798381" duration="3470000" />
+      <workItem from="1687287651784" duration="4359000" />
+      <workItem from="1687324718474" duration="873000" />
     </task>
+    <task id="LOCAL-00001" summary="model,migration and controller created">
+      <created>1687285114403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687285114403</updated>
+    </task>
+    <task id="LOCAL-00002" summary="api route define">
+      <created>1687287740422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687287740422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="task create,edit,delete part done with redis functionality (checked by postman)">
+      <created>1687287819973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687287819973</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="model,migration and controller created" />
+    <MESSAGE value="api route define" />
+    <MESSAGE value="task create,edit,delete part done with redis functionality (checked by postman)" />
+    <option name="LAST_COMMIT_MESSAGE" value="task create,edit,delete part done with redis functionality (checked by postman)" />
   </component>
 </project>
