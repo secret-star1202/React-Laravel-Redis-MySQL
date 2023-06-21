@@ -14,7 +14,6 @@ const TasksList = () => {
     const fetchTasks = async () => {
         try {
             const response = await axios.get('http://localhost:8000/api/tasks');
-
             setTasks(response.data);
         } catch (error) {
             console.error(error);
@@ -26,8 +25,6 @@ const TasksList = () => {
             const response = await axios.post('http://localhost:8000/api/tasks', {
                 title: newTaskTitle,
             });
-
-            console.log(response.data)
 
             const createdTask = {
                 id: response.data.id,
@@ -43,7 +40,6 @@ const TasksList = () => {
     };
 
     const editTask = async (task) => {
-        console.log(task)
         try {
             const updatedTask = await axios.put(
                 `http://localhost:8000/api/tasks/${task.id}`,
@@ -52,15 +48,13 @@ const TasksList = () => {
                 }
             );
 
-            const updatedTasks = tasks.map((t) => (t.id === task.id ? updatedTask.data : t));
+            const updatedTasks = tasks.map((t) => (t.id === task.id ? { ...updatedTask.data, source: 'Database' } : t));
             setTasks(updatedTasks);
             setEditTaskId(null);
         } catch (error) {
             console.error(error);
         }
     };
-
-
 
     const deleteTask = async (taskId) => {
         try {
@@ -74,51 +68,47 @@ const TasksList = () => {
     return (
         <div className="container">
             <h1 className="title">Tasks</h1>
-            <div className="task-block">
-                <h2 className="section-title">Tasks from Database</h2>
-                <ul className="task-list">
-                    {tasks
-                        .filter((task) => task.source === 'Database')
-                        .map((task, index) => (
-                            <li className="task-item" key={`task-${index}`}>
-                                {editTaskId === task.id ? (
-                                    <>
-                                        <input
-                                            type="text"
-                                            value={task.title}
-                                            onChange={(e) =>
-                                                setTasks((prevTasks) =>
-                                                    prevTasks.map((t) =>
-                                                        t.id === task.id ? { ...t, title: e.target.value } : t
-                                                    )
+            <table className="task-table">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Source</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                {tasks.map((task) => (
+                    <tr className="task-row" key={task.id}>
+                        <td>{task.title}</td>
+                        <td>{task.source}</td>
+                        <td>
+                            {editTaskId === task.id ? (
+                                <>
+                                    <input
+                                        type="text"
+                                        value={task.title}
+                                        onChange={(e) =>
+                                            setTasks((prevTasks) =>
+                                                prevTasks.map((t) =>
+                                                    t.id === task.id ? { ...t, title: e.target.value } : t
                                                 )
-                                            }
-                                        />
-                                        <button onClick={() => editTask(task)}>Save</button>
-                                    </>
-                                ) : (
-                                    <>
-                                        <span>{task.title}</span>
-                                        <button onClick={() => setEditTaskId(task.id)}>Edit</button>
-                                    </>
-                                )}
-                                <button onClick={() => deleteTask(task.id)}>Delete</button>
-                            </li>
-                        ))}
-                </ul>
-            </div>
-            <div className="task-block">
-                <h2 className="section-title">Tasks from Redis Cache</h2>
-                <ul className="task-list">
-                    {tasks
-                        .filter((task) => task.source === 'Redis')
-                        .map((task) => (
-                            <li className="task-item" key={task.id}>
-                                {task.title}
-                            </li>
-                        ))}
-                </ul>
-            </div>
+                                            )
+                                        }
+                                    />
+                                    <button onClick={() => editTask(task)}>Save</button>
+                                </>
+                            ) : (
+                                <button onClick={() => setEditTaskId(task.id)}>Edit</button>
+                            )}
+                        </td>
+                        <td>
+                            <button onClick={() => deleteTask(task.id)}>Delete</button>
+                        </td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
 
             <div className="input-section">
                 <input

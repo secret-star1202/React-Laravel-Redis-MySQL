@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="694beef8-4928-49e0-92f8-534946596a1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/TasksList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/TasksList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-redis-crud/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-redis-crud/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="694beef8-4928-49e0-92f8-534946596a1b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +152,7 @@
       <workItem from="1687166349070" duration="1056000" />
       <workItem from="1687283798381" duration="3470000" />
       <workItem from="1687287651784" duration="4359000" />
-      <workItem from="1687324718474" duration="873000" />
+      <workItem from="1687324718474" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="model,migration and controller created">
       <created>1687285114403</created>
@@ -184,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687287819973</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="store,update and delete method updated">
+      <created>1687325624339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687325624339</updated>
+    </task>
+    <task id="LOCAL-00005" summary="frontend part done&#10;-seperate task as source wise">
+      <created>1687325888923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687325888923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +199,8 @@
     <MESSAGE value="model,migration and controller created" />
     <MESSAGE value="api route define" />
     <MESSAGE value="task create,edit,delete part done with redis functionality (checked by postman)" />
-    <option name="LAST_COMMIT_MESSAGE" value="task create,edit,delete part done with redis functionality (checked by postman)" />
+    <MESSAGE value="store,update and delete method updated" />
+    <MESSAGE value="frontend part done&#10;-seperate task as source wise" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend part done&#10;-seperate task as source wise" />
   </component>
 </project>
