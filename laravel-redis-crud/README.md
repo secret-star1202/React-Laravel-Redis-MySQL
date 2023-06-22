@@ -1,66 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Simple Crud with Laravel,React and Redis
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a simple Crud application build with Laravel, React, Redis and MySQL.It's a task based crud where new task can create and showing that the source either it's came from mysql database or redis.   
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Features
+  ```
+  1. Create new task with a title.
+  2. Show all the task list and also show it's source (database or redis?)
+  3. At first Data is stored in a MySQL database and cached in Redis for faster came.
+  4. When update a task then it delete the redis cache and the source will be database 
+  and that time the updated data store in cache , after refresh we see that the source 
+  will be redis  
+  5. After delete a task it delete from database and redis cache.
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Technologies Used
+  ```
+1. Laravel: A php framework for create backend part
+2. React: A JavaScript library for building user interfaces.
+3. Redis: An in-memory data store used for caching.
+4. MySQL: A popular relational database management system.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+  ```
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Installation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. At first Download and Install redis on windows.
+```bash
+https://github.com/microsoftarchive/redis/releases
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+In "C" drive create a new folder name as "redis" and save the redis file here and then click "redis-server.exe" and "redis-cli.exe"
 
-## Laravel Sponsors
+For testing in "redis-cli.exe" type PING if it back PONG then redis server is ok
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. Clone this repository.
 
-### Premium Partners
+```bash
+https://github.com/aasif247/laravel-redis-react-crud.git
+```
+3. Navigate to the project directory:
+```bash
+e.g. cd laravel-redis-react-crud
+```
+4. Install dependencies for the backend and frontend:
+```bash
+cd laravel-redis-crud
+```
+Install redis package in laravel
+```
+composer require predis/predis
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+In .env file set "REDIS_CLIENT=predis" above the given code
+
+```
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
+
+Run migration
+```
+php artisan migrate
+```
+
+Run backend server
+```
+php artisan serve
+
+start xampp server
+start redis server
+```
+
+Now Change directory to frontend part and install dependencies
+```
+cd ../react-frontend
+npm install
+npm run dev
+```
+
+When the application start now you can access the application in your browser for frontend
+http://localhost:5173/ and Backend  http://localhost:8000
+
+## Usage
+
+```
+To create a new task, enter the title in the input field and click the "Add Task" button.
+```
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.
 
-## Code of Conduct
+## Acknowledgements
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+React
+Laravel
+Redis
+MySQL
+```
